@@ -79,7 +79,8 @@ class InterClustersEventHandler
 
     private:
         //! Vector to store pointers to each cluster's EventQueue.
-        std::vector<EventQueue *> *m_vtEventQueue; 
+        //std::vector<EventQueue *> *m_vtEventQueue;
+        vector<EventQueue *> *m_vtEventQueue;
 };
 
 //Cereal Archive Method
@@ -87,7 +88,7 @@ template<class Archive>
 void InterClustersEventHandler::serialize(Archive & archive) {
 
     //not sure
-    shared_ptr< <vector < shared_ptr<EventQueue> > > spm_vtEventQueue;
+    shared_ptr< vector< shared_ptr<EventQueue> > > spm_vtEventQueue;
     
     if(m_vtEventQueue != nullptr) {
          spm_vtEventQueue = make_shared<vector<shared_ptr<EventQueue>>>();
