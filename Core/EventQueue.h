@@ -36,8 +36,6 @@
 //cereal
 //total data member: 11 
 //serialized datamember: 5 (6 using GPU)
-#include <cereal/types/string.hpp> //for string type data member
-#include <cereal/types/polymorphic.hpp> //for inheritance
 #include <memory> //for smart pointer
 #include <cereal/types/memory.hpp> // for smart pointer
 
@@ -209,6 +207,10 @@ class EventQueue
          */
         //void deserialize(istream& input);
 
+        //Cereal
+        template<class Archive>
+        void serialize(Archive & archive);
+
     public:
 
         //! Pointer to the collection of event queue.
@@ -323,6 +325,28 @@ class EventQueue
         interClustersIncomingEvents_t* m_interClustersIncomingEvents;
 #endif // USE_GPU
 };
+
+//Cereal Archive Method
+template<class Archive>
+void EventQueue::serialize(Archive & archive) {
+
+    //! Pointer to the collection of event queue.
+    //BGQUEUE_ELEMENT* m_queueEvent;
+    //! The cluster ID of cluster that owns the event queue.
+    //CLUSTER_INDEX_TYPE m_clusterID;
+    //! The number of event queue.
+    //BGSIZE m_nMaxEvent;
+    //! The index indicating the current time slot in the delayed queue.
+    //uint32_t m_idxQueue;
+    //! Pointer to the InterClustersEventHandler.
+    //InterClustersEventHandler* m_eventHandler;
+
+
+    archive(m_nMaxEvent
+    );
+}
+
+
 
 #if defined(USE_GPU)
 

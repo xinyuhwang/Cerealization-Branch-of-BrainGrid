@@ -53,7 +53,7 @@ bool createAllModelClassInstances(TiXmlDocument* simDoc, SimulationInfo *simInfo
  */
 int main(int argc, char* argv[]) {
     {
-        ofstream os("data2.xml");
+        ofstream os("data1.xml");
         cereal::XMLOutputArchive archive(os);
 
 
