@@ -1,0 +1,823 @@
+//BrainGrid Overview
+//Written in the Dot language (See Graphviz)
+
+digraph {
+
+
+
+
+	subgraph cluster. {
+		color = aquamarine
+		node [shape = record, color = aquamarine];
+
+		Cluster[label = Cluster, style = filled];
+		ClusterInfo[label = ClusterInfo, style = filled];
+		EventQueue[label = EventQueue, style = filled];
+		FClassOfCategory[label = FClassOfCategory, style = filled];
+		GPUSpikingCluster[label = GPUSpikingCluster, style = filled];
+		IModel[label = IModel, style = filled];
+		InterClustersEventHandler[label = InterClustersEventHandler, style = filled];
+		Model[label = Model, style = filled];
+		SimulationInfo[label = SimulationInfo, style = filled];
+		Simulator[label = Simulator, style = filled];
+		SingleThreadedCluster[label = SingleThreadedCluster, style = filled];
+		SynapseIndexMap[label = SynapseIndexMap, style = filled];
+		.[label = ". (aquamarine)", style = filled];
+
+
+		//------LAYOUT FOR SUBGRAPH------
+
+
+		rankdir = BT; // Rank Direction Bottom to Top
+		nodesep = 0.84; // Node Separation
+		ranksep = 0.84; // Rank Separation
+
+
+		//INHERITANCE//
+
+
+		SingleThreadedCluster -> Cluster [style=invis];
+
+
+		//COMPOSITION//
+
+
+		Cluster -> SimulationInfo [style=invis];
+
+		ClusterInfo -> InterClustersEventHandler [style=invis];
+
+		EventQueue -> InterClustersEventHandler [style=invis];
+		EventQueue -> SimulationInfo [style=invis];
+		EventQueue -> SynapseIndexMap [style=invis];
+
+		GPUSpikingCluster -> Model [style=invis];
+
+		IModel -> Cluster [style=invis];
+		IModel -> SimulationInfo [style=invis];
+
+		InterClustersEventHandler -> EventQueue [style=invis];
+
+		Model -> GPUSpikingCluster [style=invis];
+		Model -> IModel [style=invis];
+		Model -> SynapseIndexMap [style=invis];
+
+		Simulator -> IModel [style=invis];
+		Simulator -> SimulationInfo [style=invis];
+
+		SynapseIndexMap -> Cluster [style=invis];
+		SynapseIndexMap -> ClusterInfo [style=invis];
+		SynapseIndexMap -> GPUSpikingCluster [style=invis];
+		SynapseIndexMap -> SimulationInfo [style=invis];
+	}//end subgraph .
+
+
+	subgraph NAME_ERROR {
+		node [shape = record];
+
+
+		BGDriver[label = BGDriver, style = filled];
+
+
+		//------LAYOUT FOR SUBGRAPH------
+
+
+		rankdir = BT; // Rank Direction Bottom to Top
+		nodesep = 0.84; // Node Separation
+		ranksep = 0.84; // Rank Separation
+
+
+		//INHERITANCE//
+
+
+
+		//COMPOSITION//
+
+	}//end subgraph NAME_ERROR
+
+
+	subgraph NAME_ERROR {
+		node [shape = record];
+
+
+		Global[label = Global, style = filled];
+
+
+		//------LAYOUT FOR SUBGRAPH------
+
+
+		rankdir = BT; // Rank Direction Bottom to Top
+		nodesep = 0.84; // Node Separation
+		ranksep = 0.84; // Rank Separation
+
+
+		//INHERITANCE//
+
+
+
+		//COMPOSITION//
+
+	}//end subgraph NAME_ERROR
+
+
+	subgraph NAME_ERROR {
+		node [shape = record];
+
+
+		ParamContainer[label = ParamContainer, style = filled];
+
+
+		//------LAYOUT FOR SUBGRAPH------
+
+
+		rankdir = BT; // Rank Direction Bottom to Top
+		nodesep = 0.84; // Node Separation
+		ranksep = 0.84; // Rank Separation
+
+
+		//INHERITANCE//
+
+
+
+		//COMPOSITION//
+
+	}//end subgraph NAME_ERROR
+
+
+	subgraph NAME_ERROR {
+		node [shape = record];
+
+
+		IRecorder[label = IRecorder, style = filled];
+
+
+		//------LAYOUT FOR SUBGRAPH------
+
+
+		rankdir = BT; // Rank Direction Bottom to Top
+		nodesep = 0.84; // Node Separation
+		ranksep = 0.84; // Rank Separation
+
+
+		//INHERITANCE//
+
+
+
+		//COMPOSITION//
+
+	}//end subgraph NAME_ERROR
+
+
+	subgraph NAME_ERROR {
+		node [shape = record];
+
+
+		FSInput[label = FSInput, style = filled];
+
+
+		//------LAYOUT FOR SUBGRAPH------
+
+
+		rankdir = BT; // Rank Direction Bottom to Top
+		nodesep = 0.84; // Node Separation
+		ranksep = 0.84; // Rank Separation
+
+
+		//INHERITANCE//
+
+
+
+		//COMPOSITION//
+
+	}//end subgraph NAME_ERROR
+
+
+	subgraph NAME_ERROR {
+		node [shape = record];
+
+
+		ISInput[label = ISInput, style = filled];
+
+
+		//------LAYOUT FOR SUBGRAPH------
+
+
+		rankdir = BT; // Rank Direction Bottom to Top
+		nodesep = 0.84; // Node Separation
+		ranksep = 0.84; // Rank Separation
+
+
+		//INHERITANCE//
+
+
+
+		//COMPOSITION//
+
+	}//end subgraph NAME_ERROR
+
+
+	subgraph NAME_ERROR {
+		node [shape = record];
+
+
+		IAllNeurons[label = IAllNeurons, style = filled];
+
+
+		//------LAYOUT FOR SUBGRAPH------
+
+
+		rankdir = BT; // Rank Direction Bottom to Top
+		nodesep = 0.84; // Node Separation
+		ranksep = 0.84; // Rank Separation
+
+
+		//INHERITANCE//
+
+
+
+		//COMPOSITION//
+
+	}//end subgraph NAME_ERROR
+
+
+	subgraph NAME_ERROR {
+		node [shape = record];
+
+
+		IAllSynapses[label = IAllSynapses, style = filled];
+
+
+		//------LAYOUT FOR SUBGRAPH------
+
+
+		rankdir = BT; // Rank Direction Bottom to Top
+		nodesep = 0.84; // Node Separation
+		ranksep = 0.84; // Rank Separation
+
+
+		//INHERITANCE//
+
+
+
+		//COMPOSITION//
+
+	}//end subgraph NAME_ERROR
+
+
+	subgraph NAME_ERROR {
+		node [shape = record];
+
+
+		Connections[label = Connections, style = filled];
+
+
+		//------LAYOUT FOR SUBGRAPH------
+
+
+		rankdir = BT; // Rank Direction Bottom to Top
+		nodesep = 0.84; // Node Separation
+		ranksep = 0.84; // Rank Separation
+
+
+		//INHERITANCE//
+
+
+
+		//COMPOSITION//
+
+	}//end subgraph NAME_ERROR
+
+
+	subgraph NAME_ERROR {
+		node [shape = record];
+
+
+		Layout[label = Layout, style = filled];
+
+
+		//------LAYOUT FOR SUBGRAPH------
+
+
+		rankdir = BT; // Rank Direction Bottom to Top
+		nodesep = 0.84; // Node Separation
+		ranksep = 0.84; // Rank Separation
+
+
+		//INHERITANCE//
+
+
+
+		//COMPOSITION//
+
+	}//end subgraph NAME_ERROR
+
+
+	subgraph NAME_ERROR {
+		node [shape = record];
+
+
+		ParseParamError[label = ParseParamError, style = filled];
+
+
+		//------LAYOUT FOR SUBGRAPH------
+
+
+		rankdir = BT; // Rank Direction Bottom to Top
+		nodesep = 0.84; // Node Separation
+		ranksep = 0.84; // Rank Separation
+
+
+		//INHERITANCE//
+
+
+
+		//COMPOSITION//
+
+	}//end subgraph NAME_ERROR
+
+
+	subgraph NAME_ERROR {
+		node [shape = record];
+
+
+		Timer[label = Timer, style = filled];
+
+
+		//------LAYOUT FOR SUBGRAPH------
+
+
+		rankdir = BT; // Rank Direction Bottom to Top
+		nodesep = 0.84; // Node Separation
+		ranksep = 0.84; // Rank Separation
+
+
+		//INHERITANCE//
+
+
+
+		//COMPOSITION//
+
+	}//end subgraph NAME_ERROR
+
+
+	subgraph NAME_ERROR {
+		node [shape = record];
+
+
+		MersenneTwister_d[label = MersenneTwister_d, style = filled];
+
+
+		//------LAYOUT FOR SUBGRAPH------
+
+
+		rankdir = BT; // Rank Direction Bottom to Top
+		nodesep = 0.84; // Node Separation
+		ranksep = 0.84; // Rank Separation
+
+
+		//INHERITANCE//
+
+
+
+		//COMPOSITION//
+
+	}//end subgraph NAME_ERROR
+
+
+	subgraph NAME_ERROR {
+		node [shape = record];
+
+
+		AllSpikingNeurons[label = AllSpikingNeurons, style = filled];
+
+
+		//------LAYOUT FOR SUBGRAPH------
+
+
+		rankdir = BT; // Rank Direction Bottom to Top
+		nodesep = 0.84; // Node Separation
+		ranksep = 0.84; // Rank Separation
+
+
+		//INHERITANCE//
+
+
+
+		//COMPOSITION//
+
+	}//end subgraph NAME_ERROR
+
+
+	subgraph NAME_ERROR {
+		node [shape = record];
+
+
+		AllSpikingSynapses[label = AllSpikingSynapses, style = filled];
+
+
+		//------LAYOUT FOR SUBGRAPH------
+
+
+		rankdir = BT; // Rank Direction Bottom to Top
+		nodesep = 0.84; // Node Separation
+		ranksep = 0.84; // Rank Separation
+
+
+		//INHERITANCE//
+
+
+
+		//COMPOSITION//
+
+	}//end subgraph NAME_ERROR
+
+
+	subgraph NAME_ERROR {
+		node [shape = record];
+
+
+		tinyxml[label = tinyxml, style = filled];
+
+
+		//------LAYOUT FOR SUBGRAPH------
+
+
+		rankdir = BT; // Rank Direction Bottom to Top
+		nodesep = 0.84; // Node Separation
+		ranksep = 0.84; // Rank Separation
+
+
+		//INHERITANCE//
+
+
+
+		//COMPOSITION//
+
+	}//end subgraph NAME_ERROR
+
+
+	subgraph NAME_ERROR {
+		node [shape = record];
+
+
+		Util[label = Util, style = filled];
+
+
+		//------LAYOUT FOR SUBGRAPH------
+
+
+		rankdir = BT; // Rank Direction Bottom to Top
+		nodesep = 0.84; // Node Separation
+		ranksep = 0.84; // Rank Separation
+
+
+		//INHERITANCE//
+
+
+
+		//COMPOSITION//
+
+	}//end subgraph NAME_ERROR
+
+
+	subgraph NAME_ERROR {
+		node [shape = record];
+
+
+		ConnGrowth[label = ConnGrowth, style = filled];
+
+
+		//------LAYOUT FOR SUBGRAPH------
+
+
+		rankdir = BT; // Rank Direction Bottom to Top
+		nodesep = 0.84; // Node Separation
+		ranksep = 0.84; // Rank Separation
+
+
+		//INHERITANCE//
+
+
+
+		//COMPOSITION//
+
+	}//end subgraph NAME_ERROR
+
+
+	subgraph NAME_ERROR {
+		node [shape = record];
+
+
+		Coordinate[label = Coordinate, style = filled];
+
+
+		//------LAYOUT FOR SUBGRAPH------
+
+
+		rankdir = BT; // Rank Direction Bottom to Top
+		nodesep = 0.84; // Node Separation
+		ranksep = 0.84; // Rank Separation
+
+
+		//INHERITANCE//
+
+
+
+		//COMPOSITION//
+
+	}//end subgraph NAME_ERROR
+
+
+	subgraph NAME_ERROR {
+		node [shape = record];
+
+
+		AllSynapses[label = AllSynapses, style = filled];
+
+
+		//------LAYOUT FOR SUBGRAPH------
+
+
+		rankdir = BT; // Rank Direction Bottom to Top
+		nodesep = 0.84; // Node Separation
+		ranksep = 0.84; // Rank Separation
+
+
+		//INHERITANCE//
+
+
+
+		//COMPOSITION//
+
+	}//end subgraph NAME_ERROR
+
+
+	subgraph NAME_ERROR {
+		node [shape = record];
+
+
+		BGTypes[label = BGTypes, style = filled];
+
+
+		//------LAYOUT FOR SUBGRAPH------
+
+
+		rankdir = BT; // Rank Direction Bottom to Top
+		nodesep = 0.84; // Node Separation
+		ranksep = 0.84; // Rank Separation
+
+
+		//INHERITANCE//
+
+
+
+		//COMPOSITION//
+
+	}//end subgraph NAME_ERROR
+
+
+	subgraph NAME_ERROR {
+		node [shape = record];
+
+
+		curand_kernel[label = curand_kernel, style = filled];
+
+
+		//------LAYOUT FOR SUBGRAPH------
+
+
+		rankdir = BT; // Rank Direction Bottom to Top
+		nodesep = 0.84; // Node Separation
+		ranksep = 0.84; // Rank Separation
+
+
+		//INHERITANCE//
+
+
+
+		//COMPOSITION//
+
+	}//end subgraph NAME_ERROR
+
+
+	subgraph NAME_ERROR {
+		node [shape = record];
+
+
+		AllLIFNeurons[label = AllLIFNeurons, style = filled];
+
+
+		//------LAYOUT FOR SUBGRAPH------
+
+
+		rankdir = BT; // Rank Direction Bottom to Top
+		nodesep = 0.84; // Node Separation
+		ranksep = 0.84; // Rank Separation
+
+
+		//INHERITANCE//
+
+
+
+		//COMPOSITION//
+
+	}//end subgraph NAME_ERROR
+
+
+	subgraph NAME_ERROR {
+		node [shape = record];
+
+
+		AllIZHNeurons[label = AllIZHNeurons, style = filled];
+
+
+		//------LAYOUT FOR SUBGRAPH------
+
+
+		rankdir = BT; // Rank Direction Bottom to Top
+		nodesep = 0.84; // Node Separation
+		ranksep = 0.84; // Rank Separation
+
+
+		//INHERITANCE//
+
+
+
+		//COMPOSITION//
+
+	}//end subgraph NAME_ERROR
+
+
+	subgraph NAME_ERROR {
+		node [shape = record];
+
+
+		AllDSSynapses[label = AllDSSynapses, style = filled];
+
+
+		//------LAYOUT FOR SUBGRAPH------
+
+
+		rankdir = BT; // Rank Direction Bottom to Top
+		nodesep = 0.84; // Node Separation
+		ranksep = 0.84; // Rank Separation
+
+
+		//INHERITANCE//
+
+
+
+		//COMPOSITION//
+
+	}//end subgraph NAME_ERROR
+
+
+	subgraph NAME_ERROR {
+		node [shape = record];
+
+
+		AllSTDPSynapses[label = AllSTDPSynapses, style = filled];
+
+
+		//------LAYOUT FOR SUBGRAPH------
+
+
+		rankdir = BT; // Rank Direction Bottom to Top
+		nodesep = 0.84; // Node Separation
+		ranksep = 0.84; // Rank Separation
+
+
+		//INHERITANCE//
+
+
+
+		//COMPOSITION//
+
+	}//end subgraph NAME_ERROR
+
+
+	subgraph NAME_ERROR {
+		node [shape = record];
+
+
+		AllDynamicSTDPSynapses[label = AllDynamicSTDPSynapses, style = filled];
+
+
+		//------LAYOUT FOR SUBGRAPH------
+
+
+		rankdir = BT; // Rank Direction Bottom to Top
+		nodesep = 0.84; // Node Separation
+		ranksep = 0.84; // Rank Separation
+
+
+		//INHERITANCE//
+
+
+
+		//COMPOSITION//
+
+	}//end subgraph NAME_ERROR
+
+
+	subgraph NAME_ERROR {
+		node [shape = record];
+
+
+		ConnStatic[label = ConnStatic, style = filled];
+
+
+		//------LAYOUT FOR SUBGRAPH------
+
+
+		rankdir = BT; // Rank Direction Bottom to Top
+		nodesep = 0.84; // Node Separation
+		ranksep = 0.84; // Rank Separation
+
+
+		//INHERITANCE//
+
+
+
+		//COMPOSITION//
+
+	}//end subgraph NAME_ERROR
+
+
+	subgraph NAME_ERROR {
+		node [shape = record];
+
+
+		FixedLayout[label = FixedLayout, style = filled];
+
+
+		//------LAYOUT FOR SUBGRAPH------
+
+
+		rankdir = BT; // Rank Direction Bottom to Top
+		nodesep = 0.84; // Node Separation
+		ranksep = 0.84; // Rank Separation
+
+
+		//INHERITANCE//
+
+
+
+		//COMPOSITION//
+
+	}//end subgraph NAME_ERROR
+
+
+	subgraph NAME_ERROR {
+		node [shape = record];
+
+
+		DynamicLayout[label = DynamicLayout, style = filled];
+
+
+		//------LAYOUT FOR SUBGRAPH------
+
+
+		rankdir = BT; // Rank Direction Bottom to Top
+		nodesep = 0.84; // Node Separation
+		ranksep = 0.84; // Rank Separation
+
+
+		//INHERITANCE//
+
+
+
+		//COMPOSITION//
+
+	}//end subgraph NAME_ERROR
+//-------LAYOUT OF RELATIONSHIPS BETWEEN SUBGRAPHS------//
+rankdir = BT; // Rank Direction Top to Bottom
+nodesep = 0.21; // Node Separation
+ranksep = 0.21; // Rank Separation
+concentrate = true;
+
+
+edge [color=aquamarine];
+. -> Timer [arrowhead=ediamond];
+
+edge [color=black];
+BGDriver -> . [arrowhead=ediamond];
+
+edge [color=aquamarine];
+. -> IAllNeurons [arrowhead=ediamond];
+. -> FixedLayout [arrowhead=ediamond];
+. -> AllSpikingSynapses [arrowhead=ediamond];
+. -> curand_kernel [arrowhead=ediamond];
+. -> Layout [arrowhead=ediamond];
+. -> ConnGrowth [arrowhead=ediamond];
+. -> MersenneTwister_d [arrowhead=ediamond];
+. -> AllSynapses [arrowhead=ediamond];
+. -> tinyxml [arrowhead=ediamond];
+. -> AllIZHNeurons [arrowhead=ediamond];
+. -> AllSTDPSynapses [arrowhead=ediamond];
+. -> Connections [arrowhead=ediamond];
+. -> IRecorder [arrowhead=ediamond];
+. -> BGTypes [arrowhead=ediamond];
+. -> ISInput [arrowhead=ediamond];
+. -> Coordinate [arrowhead=ediamond];
+. -> ParseParamError [arrowhead=ediamond];
+}//End digraph declaration
