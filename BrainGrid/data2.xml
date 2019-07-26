@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<cereal>
+	<aModel>
+		<value0>
+			<polymorphic_id>0</polymorphic_id>
+		</value0>
+		<value1>
+			<polymorphic_id>0</polymorphic_id>
+		</value1>
+		<value2>
+			<ptr_wrapper>
+				<id>2147483649</id>
+				<data size="dynamic"/>
+			</ptr_wrapper>
+		</value2>
+		<value3>
+			<ptr_wrapper>
+				<id>2147483650</id>
+				<data size="dynamic">
+					<value0>
+						<polymorphic_id>1073741824</polymorphic_id>
+						<ptr_wrapper>
+							<id>2147483651</id>
+							<data>
+								<value0>0</value0>
+								<value1>0</value1>
+								<value2>0</value2>
+								<value3>
+									<ptr_wrapper>
+										<id>0</id>
+									</ptr_wrapper>
+								</value3>
+								<value4>0</value4>
+								<value5>
+									<polymorphic_id>0</polymorphic_id>
+								</value5>
+								<value6>0</value6>
+								<value7>
+									<polymorphic_id>0</polymorphic_id>
+								</value7>
+							</data>
+						</ptr_wrapper>
+					</value0>
+					<value1>
+						<polymorphic_id>0</polymorphic_id>
+					</value1>
+					<value2>
+						<polymorphic_id>0</polymorphic_id>
+					</value2>
+				</data>
+			</ptr_wrapper>
+		</value3>
+	</aModel>
+</cereal>
+

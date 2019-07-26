@@ -1,0 +1,861 @@
+//BrainGrid Overview
+//Written in the Dot language (See Graphviz)
+
+digraph {
+
+
+
+
+	subgraph cluster {
+		color = aquamarine
+		node [shape = record, color = aquamarine];
+
+		Cluster[label = Cluster, style = filled];
+		ClusterInfo[label = ClusterInfo, style = filled];
+		EventQueue[label = EventQueue, style = filled];
+		FClassOfCategory[label = FClassOfCategory, style = filled];
+		GPUSpikingCluster[label = GPUSpikingCluster, style = filled];
+		IModel[label = IModel, style = filled];
+		InterClustersEventHandler[label = InterClustersEventHandler, style = filled];
+		Model[label = Model, style = filled];
+		SimulationInfo[label = SimulationInfo, style = filled];
+		Simulator[label = Simulator, style = filled];
+		SingleThreadedCluster[label = SingleThreadedCluster, style = filled];
+		SynapseIndexMap[label = SynapseIndexMap, style = filled];
+
+
+		//------LAYOUT FOR SUBGRAPH------
+
+
+		rankdir = BT; // Rank Direction Bottom to Top
+		nodesep = 0.84; // Node Separation
+		ranksep = 0.84; // Rank Separation
+
+
+		//INHERITANCE//
+
+
+		SingleThreadedCluster -> Cluster [arrowhead=empty];
+
+
+		//COMPOSITION//
+
+
+		Cluster -> SimulationInfo [arrowhead=ediamond];
+
+		ClusterInfo -> InterClustersEventHandler [arrowhead=ediamond];
+
+		EventQueue -> InterClustersEventHandler [arrowhead=ediamond];
+		EventQueue -> SimulationInfo [arrowhead=ediamond];
+		EventQueue -> SynapseIndexMap [arrowhead=ediamond];
+
+		GPUSpikingCluster -> Model [arrowhead=ediamond];
+
+		IModel -> Cluster [arrowhead=ediamond];
+		IModel -> SimulationInfo [arrowhead=ediamond];
+
+		InterClustersEventHandler -> EventQueue [arrowhead=ediamond];
+
+		Model -> GPUSpikingCluster [arrowhead=ediamond];
+		Model -> IModel [arrowhead=ediamond];
+		Model -> SynapseIndexMap [arrowhead=ediamond];
+
+		Simulator -> IModel [arrowhead=ediamond];
+		Simulator -> SimulationInfo [arrowhead=ediamond];
+
+		SynapseIndexMap -> Cluster [arrowhead=ediamond];
+		SynapseIndexMap -> ClusterInfo [arrowhead=ediamond];
+		SynapseIndexMap -> GPUSpikingCluster [arrowhead=ediamond];
+		SynapseIndexMap -> SimulationInfo [arrowhead=ediamond];
+	}//end subgraph .
+
+
+	subgraph NAME_ERROR {
+		node [shape = record];
+
+
+		BGDriver[label = BGDriver, style = filled];
+
+
+		//------LAYOUT FOR SUBGRAPH------
+
+
+		rankdir = BT; // Rank Direction Bottom to Top
+		nodesep = 0.84; // Node Separation
+		ranksep = 0.84; // Rank Separation
+
+
+		//INHERITANCE//
+
+
+
+		//COMPOSITION//
+
+	}//end subgraph NAME_ERROR
+
+
+	subgraph NAME_ERROR {
+		node [shape = record];
+
+
+		Global[label = Global, style = filled];
+
+
+		//------LAYOUT FOR SUBGRAPH------
+
+
+		rankdir = BT; // Rank Direction Bottom to Top
+		nodesep = 0.84; // Node Separation
+		ranksep = 0.84; // Rank Separation
+
+
+		//INHERITANCE//
+
+
+
+		//COMPOSITION//
+
+	}//end subgraph NAME_ERROR
+
+
+	subgraph NAME_ERROR {
+		node [shape = record];
+
+
+		ParamContainer[label = ParamContainer, style = filled];
+
+
+		//------LAYOUT FOR SUBGRAPH------
+
+
+		rankdir = BT; // Rank Direction Bottom to Top
+		nodesep = 0.84; // Node Separation
+		ranksep = 0.84; // Rank Separation
+
+
+		//INHERITANCE//
+
+
+
+		//COMPOSITION//
+
+	}//end subgraph NAME_ERROR
+
+
+	subgraph NAME_ERROR {
+		node [shape = record];
+
+
+		IRecorder[label = IRecorder, style = filled];
+
+
+		//------LAYOUT FOR SUBGRAPH------
+
+
+		rankdir = BT; // Rank Direction Bottom to Top
+		nodesep = 0.84; // Node Separation
+		ranksep = 0.84; // Rank Separation
+
+
+		//INHERITANCE//
+
+
+
+		//COMPOSITION//
+
+	}//end subgraph NAME_ERROR
+
+
+	subgraph NAME_ERROR {
+		node [shape = record];
+
+
+		FSInput[label = FSInput, style = filled];
+
+
+		//------LAYOUT FOR SUBGRAPH------
+
+
+		rankdir = BT; // Rank Direction Bottom to Top
+		nodesep = 0.84; // Node Separation
+		ranksep = 0.84; // Rank Separation
+
+
+		//INHERITANCE//
+
+
+
+		//COMPOSITION//
+
+	}//end subgraph NAME_ERROR
+
+
+	subgraph NAME_ERROR {
+		node [shape = record];
+
+
+		ISInput[label = ISInput, style = filled];
+
+
+		//------LAYOUT FOR SUBGRAPH------
+
+
+		rankdir = BT; // Rank Direction Bottom to Top
+		nodesep = 0.84; // Node Separation
+		ranksep = 0.84; // Rank Separation
+
+
+		//INHERITANCE//
+
+
+
+		//COMPOSITION//
+
+	}//end subgraph NAME_ERROR
+
+
+	subgraph NAME_ERROR {
+		node [shape = record];
+
+
+		IAllNeurons[label = IAllNeurons, style = filled];
+
+
+		//------LAYOUT FOR SUBGRAPH------
+
+
+		rankdir = BT; // Rank Direction Bottom to Top
+		nodesep = 0.84; // Node Separation
+		ranksep = 0.84; // Rank Separation
+
+
+		//INHERITANCE//
+
+
+
+		//COMPOSITION//
+
+	}//end subgraph NAME_ERROR
+
+
+	subgraph NAME_ERROR {
+		node [shape = record];
+
+
+		IAllSynapses[label = IAllSynapses, style = filled];
+
+
+		//------LAYOUT FOR SUBGRAPH------
+
+
+		rankdir = BT; // Rank Direction Bottom to Top
+		nodesep = 0.84; // Node Separation
+		ranksep = 0.84; // Rank Separation
+
+
+		//INHERITANCE//
+
+
+
+		//COMPOSITION//
+
+	}//end subgraph NAME_ERROR
+
+
+	subgraph NAME_ERROR {
+		node [shape = record];
+
+
+		Connections[label = Connections, style = filled];
+
+
+		//------LAYOUT FOR SUBGRAPH------
+
+
+		rankdir = BT; // Rank Direction Bottom to Top
+		nodesep = 0.84; // Node Separation
+		ranksep = 0.84; // Rank Separation
+
+
+		//INHERITANCE//
+
+
+
+		//COMPOSITION//
+
+	}//end subgraph NAME_ERROR
+
+
+	subgraph NAME_ERROR {
+		node [shape = record];
+
+
+		Layout[label = Layout, style = filled];
+
+
+		//------LAYOUT FOR SUBGRAPH------
+
+
+		rankdir = BT; // Rank Direction Bottom to Top
+		nodesep = 0.84; // Node Separation
+		ranksep = 0.84; // Rank Separation
+
+
+		//INHERITANCE//
+
+
+
+		//COMPOSITION//
+
+	}//end subgraph NAME_ERROR
+
+
+	subgraph NAME_ERROR {
+		node [shape = record];
+
+
+		ParseParamError[label = ParseParamError, style = filled];
+
+
+		//------LAYOUT FOR SUBGRAPH------
+
+
+		rankdir = BT; // Rank Direction Bottom to Top
+		nodesep = 0.84; // Node Separation
+		ranksep = 0.84; // Rank Separation
+
+
+		//INHERITANCE//
+
+
+
+		//COMPOSITION//
+
+	}//end subgraph NAME_ERROR
+
+
+	subgraph NAME_ERROR {
+		node [shape = record];
+
+
+		Timer[label = Timer, style = filled];
+
+
+		//------LAYOUT FOR SUBGRAPH------
+
+
+		rankdir = BT; // Rank Direction Bottom to Top
+		nodesep = 0.84; // Node Separation
+		ranksep = 0.84; // Rank Separation
+
+
+		//INHERITANCE//
+
+
+
+		//COMPOSITION//
+
+	}//end subgraph NAME_ERROR
+
+
+	subgraph NAME_ERROR {
+		node [shape = record];
+
+
+		MersenneTwister_d[label = MersenneTwister_d, style = filled];
+
+
+		//------LAYOUT FOR SUBGRAPH------
+
+
+		rankdir = BT; // Rank Direction Bottom to Top
+		nodesep = 0.84; // Node Separation
+		ranksep = 0.84; // Rank Separation
+
+
+		//INHERITANCE//
+
+
+
+		//COMPOSITION//
+
+	}//end subgraph NAME_ERROR
+
+
+	subgraph NAME_ERROR {
+		node [shape = record];
+
+
+		AllSpikingNeurons[label = AllSpikingNeurons, style = filled];
+
+
+		//------LAYOUT FOR SUBGRAPH------
+
+
+		rankdir = BT; // Rank Direction Bottom to Top
+		nodesep = 0.84; // Node Separation
+		ranksep = 0.84; // Rank Separation
+
+
+		//INHERITANCE//
+
+
+
+		//COMPOSITION//
+
+	}//end subgraph NAME_ERROR
+
+
+	subgraph NAME_ERROR {
+		node [shape = record];
+
+
+		AllSpikingSynapses[label = AllSpikingSynapses, style = filled];
+
+
+		//------LAYOUT FOR SUBGRAPH------
+
+
+		rankdir = BT; // Rank Direction Bottom to Top
+		nodesep = 0.84; // Node Separation
+		ranksep = 0.84; // Rank Separation
+
+
+		//INHERITANCE//
+
+
+
+		//COMPOSITION//
+
+	}//end subgraph NAME_ERROR
+
+
+	subgraph NAME_ERROR {
+		node [shape = record];
+
+
+		tinyxml[label = tinyxml, style = filled];
+
+
+		//------LAYOUT FOR SUBGRAPH------
+
+
+		rankdir = BT; // Rank Direction Bottom to Top
+		nodesep = 0.84; // Node Separation
+		ranksep = 0.84; // Rank Separation
+
+
+		//INHERITANCE//
+
+
+
+		//COMPOSITION//
+
+	}//end subgraph NAME_ERROR
+
+
+	subgraph NAME_ERROR {
+		node [shape = record];
+
+
+		Util[label = Util, style = filled];
+
+
+		//------LAYOUT FOR SUBGRAPH------
+
+
+		rankdir = BT; // Rank Direction Bottom to Top
+		nodesep = 0.84; // Node Separation
+		ranksep = 0.84; // Rank Separation
+
+
+		//INHERITANCE//
+
+
+
+		//COMPOSITION//
+
+	}//end subgraph NAME_ERROR
+
+
+	subgraph NAME_ERROR {
+		node [shape = record];
+
+
+		ConnGrowth[label = ConnGrowth, style = filled];
+
+
+		//------LAYOUT FOR SUBGRAPH------
+
+
+		rankdir = BT; // Rank Direction Bottom to Top
+		nodesep = 0.84; // Node Separation
+		ranksep = 0.84; // Rank Separation
+
+
+		//INHERITANCE//
+
+
+
+		//COMPOSITION//
+
+	}//end subgraph NAME_ERROR
+
+
+	subgraph NAME_ERROR {
+		node [shape = record];
+
+
+		Coordinate[label = Coordinate, style = filled];
+
+
+		//------LAYOUT FOR SUBGRAPH------
+
+
+		rankdir = BT; // Rank Direction Bottom to Top
+		nodesep = 0.84; // Node Separation
+		ranksep = 0.84; // Rank Separation
+
+
+		//INHERITANCE//
+
+
+
+		//COMPOSITION//
+
+	}//end subgraph NAME_ERROR
+
+
+	subgraph NAME_ERROR {
+		node [shape = record];
+
+
+		AllSynapses[label = AllSynapses, style = filled];
+
+
+		//------LAYOUT FOR SUBGRAPH------
+
+
+		rankdir = BT; // Rank Direction Bottom to Top
+		nodesep = 0.84; // Node Separation
+		ranksep = 0.84; // Rank Separation
+
+
+		//INHERITANCE//
+
+
+
+		//COMPOSITION//
+
+	}//end subgraph NAME_ERROR
+
+
+	subgraph NAME_ERROR {
+		node [shape = record];
+
+
+		BGTypes[label = BGTypes, style = filled];
+
+
+		//------LAYOUT FOR SUBGRAPH------
+
+
+		rankdir = BT; // Rank Direction Bottom to Top
+		nodesep = 0.84; // Node Separation
+		ranksep = 0.84; // Rank Separation
+
+
+		//INHERITANCE//
+
+
+
+		//COMPOSITION//
+
+	}//end subgraph NAME_ERROR
+
+
+	subgraph NAME_ERROR {
+		node [shape = record];
+
+
+		curand_kernel[label = curand_kernel, style = filled];
+
+
+		//------LAYOUT FOR SUBGRAPH------
+
+
+		rankdir = BT; // Rank Direction Bottom to Top
+		nodesep = 0.84; // Node Separation
+		ranksep = 0.84; // Rank Separation
+
+
+		//INHERITANCE//
+
+
+
+		//COMPOSITION//
+
+	}//end subgraph NAME_ERROR
+
+
+	subgraph NAME_ERROR {
+		node [shape = record];
+
+
+		AllLIFNeurons[label = AllLIFNeurons, style = filled];
+
+
+		//------LAYOUT FOR SUBGRAPH------
+
+
+		rankdir = BT; // Rank Direction Bottom to Top
+		nodesep = 0.84; // Node Separation
+		ranksep = 0.84; // Rank Separation
+
+
+		//INHERITANCE//
+
+
+
+		//COMPOSITION//
+
+	}//end subgraph NAME_ERROR
+
+
+	subgraph NAME_ERROR {
+		node [shape = record];
+
+
+		AllIZHNeurons[label = AllIZHNeurons, style = filled];
+
+
+		//------LAYOUT FOR SUBGRAPH------
+
+
+		rankdir = BT; // Rank Direction Bottom to Top
+		nodesep = 0.84; // Node Separation
+		ranksep = 0.84; // Rank Separation
+
+
+		//INHERITANCE//
+
+
+
+		//COMPOSITION//
+
+	}//end subgraph NAME_ERROR
+
+
+	subgraph NAME_ERROR {
+		node [shape = record];
+
+
+		AllDSSynapses[label = AllDSSynapses, style = filled];
+
+
+		//------LAYOUT FOR SUBGRAPH------
+
+
+		rankdir = BT; // Rank Direction Bottom to Top
+		nodesep = 0.84; // Node Separation
+		ranksep = 0.84; // Rank Separation
+
+
+		//INHERITANCE//
+
+
+
+		//COMPOSITION//
+
+	}//end subgraph NAME_ERROR
+
+
+	subgraph NAME_ERROR {
+		node [shape = record];
+
+
+		AllSTDPSynapses[label = AllSTDPSynapses, style = filled];
+
+
+		//------LAYOUT FOR SUBGRAPH------
+
+
+		rankdir = BT; // Rank Direction Bottom to Top
+		nodesep = 0.84; // Node Separation
+		ranksep = 0.84; // Rank Separation
+
+
+		//INHERITANCE//
+
+
+
+		//COMPOSITION//
+
+	}//end subgraph NAME_ERROR
+
+
+	subgraph NAME_ERROR {
+		node [shape = record];
+
+
+		AllDynamicSTDPSynapses[label = AllDynamicSTDPSynapses, style = filled];
+
+
+		//------LAYOUT FOR SUBGRAPH------
+
+
+		rankdir = BT; // Rank Direction Bottom to Top
+		nodesep = 0.84; // Node Separation
+		ranksep = 0.84; // Rank Separation
+
+
+		//INHERITANCE//
+
+
+
+		//COMPOSITION//
+
+	}//end subgraph NAME_ERROR
+
+
+	subgraph NAME_ERROR {
+		node [shape = record];
+
+
+		ConnStatic[label = ConnStatic, style = filled];
+
+
+		//------LAYOUT FOR SUBGRAPH------
+
+
+		rankdir = BT; // Rank Direction Bottom to Top
+		nodesep = 0.84; // Node Separation
+		ranksep = 0.84; // Rank Separation
+
+
+		//INHERITANCE//
+
+
+
+		//COMPOSITION//
+
+	}//end subgraph NAME_ERROR
+
+
+	subgraph NAME_ERROR {
+		node [shape = record];
+
+
+		FixedLayout[label = FixedLayout, style = filled];
+
+
+		//------LAYOUT FOR SUBGRAPH------
+
+
+		rankdir = BT; // Rank Direction Bottom to Top
+		nodesep = 0.84; // Node Separation
+		ranksep = 0.84; // Rank Separation
+
+
+		//INHERITANCE//
+
+
+
+		//COMPOSITION//
+
+	}//end subgraph NAME_ERROR
+
+
+	subgraph NAME_ERROR {
+		node [shape = record];
+
+
+		DynamicLayout[label = DynamicLayout, style = filled];
+
+
+		//------LAYOUT FOR SUBGRAPH------
+
+
+		rankdir = BT; // Rank Direction Bottom to Top
+		nodesep = 0.84; // Node Separation
+		ranksep = 0.84; // Rank Separation
+
+
+		//INHERITANCE//
+
+
+
+		//COMPOSITION//
+
+	}//end subgraph NAME_ERROR
+//-------LAYOUT OF RELATIONSHIPS BETWEEN SUBGRAPHS------//
+rankdir = BT; // Rank Direction Top to Bottom
+nodesep = 0.84; // Node Separation
+ranksep = 0.84; // Rank Separation
+concentrate = true;
+
+
+edge [color=black];
+BGDriver -> Global [arrowhead=ediamond];
+BGDriver -> ParamContainer [arrowhead=ediamond];
+BGDriver -> Model [arrowhead=ediamond];
+BGDriver -> FClassOfCategory [arrowhead=ediamond];
+BGDriver -> IRecorder [arrowhead=ediamond];
+BGDriver -> FSInput [arrowhead=ediamond];
+BGDriver -> Simulator [arrowhead=ediamond];
+BGDriver -> GPUSpikingCluster [arrowhead=ediamond];
+BGDriver -> SingleThreadedCluster [arrowhead=ediamond];
+
+edge [color=aquamarine];
+SingleThreadedCluster -> ISInput [arrowhead=ediamond];
+Cluster -> ISInput [arrowhead=ediamond];
+Cluster -> Global [arrowhead=ediamond];
+Cluster -> IAllNeurons [arrowhead=ediamond];
+Cluster -> IAllSynapses [arrowhead=ediamond];
+Cluster -> Connections [arrowhead=ediamond];
+Cluster -> Layout [arrowhead=ediamond];
+SimulationInfo -> ParseParamError [arrowhead=ediamond];
+SimulationInfo -> Global [arrowhead=ediamond];
+SimulationInfo -> Timer [arrowhead=ediamond];
+GPUSpikingCluster -> ISInput [arrowhead=ediamond];
+GPUSpikingCluster -> MersenneTwister_d [arrowhead=ediamond];
+GPUSpikingCluster -> AllSpikingNeurons [arrowhead=ediamond];
+GPUSpikingCluster -> AllSpikingSynapses [arrowhead=ediamond];
+Model -> tinyxml [arrowhead=ediamond];
+Model -> ParseParamError [arrowhead=ediamond];
+Model -> Util [arrowhead=ediamond];
+Model -> ConnGrowth [arrowhead=ediamond];
+Model -> ISInput [arrowhead=ediamond];
+Model -> Coordinate [arrowhead=ediamond];
+Model -> Layout [arrowhead=ediamond];
+SynapseIndexMap -> AllSynapses [arrowhead=ediamond];
+SynapseIndexMap -> Timer [arrowhead=ediamond];
+SynapseIndexMap -> BGTypes [arrowhead=ediamond];
+ClusterInfo -> Global [arrowhead=ediamond];
+ClusterInfo -> curand_kernel [arrowhead=ediamond];
+InterClustersEventHandler -> Global [arrowhead=ediamond];
+IModel -> tinyxml [arrowhead=ediamond];
+IModel -> Global [arrowhead=ediamond];
+IModel -> IAllNeurons [arrowhead=ediamond];
+IModel -> IAllSynapses [arrowhead=ediamond];
+IModel -> IRecorder [arrowhead=ediamond];
+IModel -> Connections [arrowhead=ediamond];
+IModel -> Layout [arrowhead=ediamond];
+Simulator -> Global [arrowhead=ediamond];
+Simulator -> ISInput [arrowhead=ediamond];
+FClassOfCategory -> AllLIFNeurons [arrowhead=ediamond];
+FClassOfCategory -> AllIZHNeurons [arrowhead=ediamond];
+FClassOfCategory -> AllDSSynapses [arrowhead=ediamond];
+FClassOfCategory -> AllSTDPSynapses [arrowhead=ediamond];
+FClassOfCategory -> AllDynamicSTDPSynapses [arrowhead=ediamond];
+FClassOfCategory -> ConnGrowth [arrowhead=ediamond];
+FClassOfCategory -> ConnStatic [arrowhead=ediamond];
+FClassOfCategory -> FixedLayout [arrowhead=ediamond];
+FClassOfCategory -> DynamicLayout [arrowhead=ediamond];
+FClassOfCategory -> ParseParamError [arrowhead=ediamond];
+FClassOfCategory -> Global [arrowhead=ediamond];
+FClassOfCategory -> IAllNeurons [arrowhead=ediamond];
+FClassOfCategory -> IAllSynapses [arrowhead=ediamond];
+FClassOfCategory -> Connections [arrowhead=ediamond];
+FClassOfCategory -> Layout [arrowhead=ediamond];
+}//End digraph declaration

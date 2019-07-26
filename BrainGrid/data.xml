@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<cereal>
+	<aModel>
+		<value0>
+			<polymorphic_id>0</polymorphic_id>
+		</value0>
+		<value1>
+			<polymorphic_id>0</polymorphic_id>
+		</value1>
+		<value2>
+			<polymorphic_id>0</polymorphic_id>
+		</value2>
+		<value3>
+			<ptr_wrapper>
+				<id>2147483649</id>
+				<data size="dynamic"/>
+			</ptr_wrapper>
+		</value3>
+	</aModel>
+</cereal>
+
